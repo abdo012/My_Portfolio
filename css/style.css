@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+body{
+    height: 800px;
+    background-color: var(--primary-color);
+}
+:root{
+    --primary-color: white;
+    --scond-color: #e9ebec;
+    --act-hov: #fafdff;
+    --primary-text-color: #22272b;
+    --text-color: white;
+    --bg-black: rgba(0, 0, 0, 0.9);
+}
+/* root=>dark-theem */
+.theem-dark{
+    --primary-color: #0c151d;
+    --scond-color: #171f26;
+    --act-hov: #0c151d;
+    --primary-text-color: white;
+    --text-color: white; 
+    --bg-black: white;
+}
+/*============theem */
+.container .theem-btn{
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 100px;
+}
+.container .theem-btn img{
+    width: 30px;
+    cursor: pointer;
+}
+/* container */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    padding: 1px;
+    background-color: var(--primary-color);
+}
+/* box img */
+.container .box-img{
+    width: 150px;
+    height: 150px;
+    border: 5px solid #9c27b0;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.container .box-img:hover{
+    border: 5px solid #9c27b0;
+    opacity: 0.9;
+}
+.container .box-img img{
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    border-radius: 50%;
+}
+/* head-text */
+.container .head-text{
+    text-align: center;
+}
+.container .head-text h1{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+.container .head-text p{
+    font-size: 20px;
+    color: #808c97;
+}
+/* social-icon */
+.container .social-icon{
+    margin-top: 10px;
+}
+.container .social-icon i{
+    font-size: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: var(--primary-text-color);
+}
+.container .social-icon a i:hover{
+    transform: scale(1.1);
+    color: #6a3a72;
+}
+/* taps-button */
+.taps{
+    min-width: 500px;
+    height: 80px;
+    background-color: var(--scond-color);
+    border-radius: 12px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.taps button{
+    width: calc(100% / 4 - 3px);
+    padding: 20px 50px;
+    background-color: var(--scond-color);
+    font-size: 17px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    color: var(--bg-black);
+    text-align: center;
+}
+.taps button:hover{
+    background-color: var(--act-hov);
+}
+.taps .active{
+    background: var(--act-hov);
+}
+/* content taps */
+.content{
+    width: 500px;
+    height: 300px;
+    background-color: var(--scond-color);
+    border-radius: 12px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content div:nth-child(2),
+.content div:nth-child(3),
+.content div:nth-child(4){
+    display: none;
+}
+/* about-me */
+.content .about-me{
+    width: 80%;
+    margin: 80px auto;
+}
+.content .about-me h2{
+    font-size: 25px;
+    font-weight: 500;
+    background-color: var(--bg-black);
+    color: var(--primary-color);
+    width: fit-content;
+    padding: 5px 3px;
+    margin-bottom: 10px;
+}
+.content .about-me p{
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: var(--primary-text-color);
+}
+
+
+
+
+
+/* Skills */
+.content .skills{
+    width: 80%;
+    /* position: relative; */
+}
+.content .skills h4:nth-child(1),
+.content .skills h4:nth-child(2),
+.content .skills h4:nth-child(3),
+.content .skills h4:nth-child(4){
+    font-size: 15px;
+    font-weight: 400;
+    margin: 20px 0;
+    position: relative;
+    color: var(--primary-text-color);
+    width: fit-content;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.content .skills h4:nth-child(1):hover,
+.content .skills h4:nth-child(2):hover,
+.content .skills h4:nth-child(3):hover,
+.content .skills h4:nth-child(4):hover{
+    transform: translateX(5px);
+}
+.content .skills h4 i{
+    position: absolute;
+    left: -20px;
+    top: -3px;
+    transform: rotate(-92deg);
+    color: seagreen;
+    font-size: 30px;
+}
+.content .skills span{
+    font-size: 12px;
+    display: block;
+    color: gray;
+}
+
+.content .skills details{
+    position: absolute;
+    width: 90px;
+    color: seagreen;
+    cursor: pointer;
+}
+.content .skills details summary span{
+    display: inline-block;
+    color: var(--bg-black);
+    font-size: 15px;
+}
+.content .skills details ol li{
+    font-size: 15px;
+    color: var(--bg-black);
+}
+/* projects */
+.content .projects{
+    margin: 130px 0;
+}
+.content .projects a{
+    text-decoration: none;
+    color: var(--text-color);
+    background: #22272b;
+    padding: 15px 30px;
+    border-radius: 12px;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.content .projects a:hover{
+    opacity: 1;
+}
+/* contact */
+.content .contact{
+    width: 80%;
+    margin: 120px auto;
+}
+.content .contact i{
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--primary-text-color);
+    margin: 5px;
+}
+.content .contact span{
+    font-size: 20px;
+    color: #808c97;
+    text-decoration: underline;
+}
+/* footer */
+.container footer{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: var(--primary-text-color);
+}
+/* -----------madia queries */
+/* --------samall mobile------------ */
+@media(max-width: 520px){
+    /* container */
+.container{
+    /* margin-left: 40px; */
+    width: 90%;
+    margin: 0 auto;
+}
+/* theem-btn */
+.container .theem-btn {
+    top: -60px;
+    right: -60px;
+}
+/* taps */
+.taps{
+    /* min-width: 300px; */
+    min-width: 100%;
+    min-height: 350px;
+}
+/* taps-button */
+.taps button{
+    width: calc(100% / 1 - 30%);
+}
+/* content */
+.content{
+    /* width: 350px; */
+    width: 100%;
+    min-height: 300px;
+}
+}
+/* -------------mobile------------- */
+@media (min-width: 520px) and (max-width: 767px){
+    /* container */
+    .container{
+        width: 80%;
+        margin: 30px auto;
+    }
+    /* taps */
+    .taps{
+        min-width: 500px;
+        min-height: 150px;
+        flex-wrap: wrap;
+    }
+    /* taps-button */
+    .taps button{
+        width: calc(100% / 2 - 2%);
+    }
+}
+
+
+/* ----------small screen---------------- */
+@media (min-width: 767px) and (max-width: 992px){
+}
+
+
+/* ----------medium screen--------------------- */
+@media (min-width: 992px) and (max-width: 1200px){
+}
+
+
+/* ---------large screen */
+@media (min-width: 1200px){
+
+}
